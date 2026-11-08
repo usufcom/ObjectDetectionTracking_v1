@@ -4,17 +4,18 @@ By YOUSSOUFA Mohamadou
 
 [Get Code from Github Repo](https://github.com/usufcom/ObjectDetectionTracking_v1) 
 
-A tutorial for object detection, face detection, and face recognition. You will run three Jupyter notebooks in **VS Code** on a **CPU** (no GPU required).
+A tutorial for reading images and videos, object detection, face detection, and face recognition. You will run four Jupyter notebooks in **VS Code** on a **CPU** (no GPU required).
 
 
-| Lab    | Notebook                                    | What you will do                                                                    |
-| ------ | ------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Lab 01 | `Lab01_Face Detection in Images.ipynb`      | Detect objects and faces in still images with YOLO                                  |
-| Lab 02 | `Lab02_Face Detection in Live Videos.ipynb` | Run the same detection on a live camera feed                                        |
-| Lab 03 | `Lab03_Face_Recognition.ipynb`              | Train an OpenCV LBPH recognizer on your own photos and recognize faces in real time |
+| Lab    | Notebook                                               | What you will do                                                                    |
+| ------ | ------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Lab 01 | `Lab01_Reading, writing and displaying images.ipynb`   | Read, write, and display images and videos with OpenCV                              |
+| Lab 02 | `Lab02_ObjectDetection in Images.ipynb`                | Detect objects and faces in still images with YOLO                                  |
+| Lab 03 | `Lab03_Object and Face Detection in Live Videos.ipynb` | Run the same detection on a live camera feed                                        |
+| Lab 04 | `Lab04_Face_Recognition.ipynb`                         | Train an OpenCV LBPH recognizer on your own photos and recognize faces in real time |
 
 
-Labs 02 and 03 need a webcam (built-in or USB).
+Labs 03 and 04 need a webcam (built-in or USB). Lab 01 also has an optional webcam section.
 
 ## What you need
 
@@ -39,7 +40,7 @@ python -m venv .venv
 - Linux / macOS: `source .venv/bin/activate`
 - Windows: `.venv\Scripts\activate`
 
-Install **uv**, then the CPU PyTorch wheels, YOLO, and OpenCV. Ultralytics installs `opencv-python`; uninstall it and replace it with `opencv-contrib-python` so Lab 03 can use the LBPH face recognizer.
+Install **uv**, then the CPU PyTorch wheels, YOLO, and OpenCV. Ultralytics installs `opencv-python`; uninstall it and replace it with `opencv-contrib-python` so Lab 04 can use the LBPH face recognizer.
 
 ```
 pip install uv
@@ -66,38 +67,17 @@ uv pip install jupyter
 ## Run the labs in VS Code
 
 1. Open this folder in VS Code (**File → Open Folder**).
-2. Open one of the three `.ipynb` lab files.
+2. Open one of the four `.ipynb` lab files.
 3. Click **Select Kernel** in the top right of the notebook.
 4. Choose the `.venv` interpreter you just created.
 5. Run the cells from top to bottom.
 
-The first time you run a YOLO cell, the model file is downloaded automatically into `yolo_models/`.
+N.B:
 
-## Lab presentations
-
-Each lab notebook can be presented as slides in VS Code.
-
-1. Open the lab notebook.
-2. Select the `.venv` kernel.
-3. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **View as Slide Show**.
+- Some of the YOLO models are found inside the `yolo_models/` folder.  
+- For other  YOLO models,  when you run athe YOLO cell, the model file is downloaded automatically into `yolo_models/`.
 
 
-| Lab    | Notebook                                    | What the slides cover                                                                    |
-| ------ | ------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Lab 01 | `Lab01_Face Detection in Images.ipynb`      | Object detection with the official YOLO model, then face detection on still images       |
-| Lab 02 | `Lab02_Face Detection in Live Videos.ipynb` | The same detection pipeline on a live camera feed                                        |
-| Lab 03 | `Lab03_Face_Recognition.ipynb`              | Training an OpenCV LBPH recognizer on your own photos and recognizing faces in real time |
-
-
-To export a standalone HTML slideshow (optional):
-
-```
-jupyter nbconvert "Lab01_Face Detection in Images.ipynb" --to slides
-jupyter nbconvert "Lab02_Face Detection in Live Videos.ipynb" --to slides
-jupyter nbconvert "Lab03_Face_Recognition.ipynb" --to slides
-```
-
-Each command writes a `.slides.html` file next to the notebook. Open that file in a browser.
 
 ## Face detection model source
 
