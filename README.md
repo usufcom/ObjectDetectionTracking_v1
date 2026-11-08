@@ -1,12 +1,18 @@
-# Simple Face Detection
+# Simple Object Detection and Tracking Labs
 
-A student tutorial for object detection, face detection, and face recognition. You will run three Jupyter notebooks in **VS Code** on a **CPU** (no GPU required).
+By YOUSSOUFA Mohamadou 
 
-| Lab | Notebook | What you will do |
-| --- | --- | --- |
-| Lab 01 | `Lab01_Face Detection in Images.ipynb` | Detect objects and faces in still images with YOLO |
-| Lab 02 | `Lab02_Face Detection in Live Videos.ipynb` | Run the same detection on a live camera feed |
-| Lab 03 | `Lab03_Face_Recognition.ipynb` | Train an OpenCV LBPH recognizer on your own photos and recognize faces in real time |
+[Get Code from Github Repo](https://github.com/usufcom/ObjectDetectionTracking_v1) 
+
+A tutorial for object detection, face detection, and face recognition. You will run three Jupyter notebooks in **VS Code** on a **CPU** (no GPU required).
+
+
+| Lab    | Notebook                                    | What you will do                                                                    |
+| ------ | ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Lab 01 | `Lab01_Face Detection in Images.ipynb`      | Detect objects and faces in still images with YOLO                                  |
+| Lab 02 | `Lab02_Face Detection in Live Videos.ipynb` | Run the same detection on a live camera feed                                        |
+| Lab 03 | `Lab03_Face_Recognition.ipynb`              | Train an OpenCV LBPH recognizer on your own photos and recognize faces in real time |
+
 
 Labs 02 and 03 need a webcam (built-in or USB).
 
@@ -15,9 +21,10 @@ Labs 02 and 03 need a webcam (built-in or USB).
 1. [Python 3.12](https://www.python.org/downloads/)
 2. [Visual Studio Code](https://code.visualstudio.com/)
 3. These VS Code extensions (install from the Extensions view):
-   - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-   - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
-   - [Jupyter Slide Show](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vscode-jupyter-slideshow) (for presenting the labs)
+  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+
+
 
 ## CPU setup with uv
 
@@ -44,9 +51,17 @@ uv pip install opencv-contrib-python
 
 Install the remaining packages:
 
+Install the packages you need if you do not have them already : 
+
 ```
-uv pip install -r requirements.txt
+uv pip install numpy
+uv pip install Pillow
+uv pip install ipython
+uv pip install ipykernel
+uv pip install jupyter
 ```
+
+
 
 ## Run the labs in VS Code
 
@@ -66,11 +81,13 @@ Each lab notebook can be presented as slides in VS Code.
 2. Select the `.venv` kernel.
 3. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **View as Slide Show**.
 
-| Lab | Notebook | What the slides cover |
-| --- | --- | --- |
-| Lab 01 | `Lab01_Face Detection in Images.ipynb` | Object detection with the official YOLO model, then face detection on still images |
-| Lab 02 | `Lab02_Face Detection in Live Videos.ipynb` | The same detection pipeline on a live camera feed |
-| Lab 03 | `Lab03_Face_Recognition.ipynb` | Training an OpenCV LBPH recognizer on your own photos and recognizing faces in real time |
+
+| Lab    | Notebook                                    | What the slides cover                                                                    |
+| ------ | ------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Lab 01 | `Lab01_Face Detection in Images.ipynb`      | Object detection with the official YOLO model, then face detection on still images       |
+| Lab 02 | `Lab02_Face Detection in Live Videos.ipynb` | The same detection pipeline on a live camera feed                                        |
+| Lab 03 | `Lab03_Face_Recognition.ipynb`              | Training an OpenCV LBPH recognizer on your own photos and recognizing faces in real time |
+
 
 To export a standalone HTML slideshow (optional):
 
@@ -117,9 +134,12 @@ resized_img = cv2.resize(
 cv2.imwrite("resized_image_name.jpg", resized_img)
 ```
 
+
+
 ## Acknowledgements
 
 These tutorials were made thanks to resources shared by:
 
 1. MariyaSha [here](https://github.com/MariyaSha/FaceRecognition)
 2. Akanametov [here](https://github.com/akanametov/yolo-face)
+
